@@ -1,0 +1,172 @@
+:root {
+
+  /* ============================= */
+  /* 🎯 BASE */
+  /* ============================= */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* ============================= */
+  /* 🎨 PALETA PRINCIPAL (SUA MARCA) */
+  /* ============================= */
+  --color-primary: #B45777;
+  --color-secondary: #C76F8F;
+  --color-tertiary: #DA87A7;
+  --color-soft: #EC9FBF;
+  --color-light: #FFB7D7;
+
+  /* ============================= */
+  /* 📝 TEXTO */
+  /* ============================= */
+  --color-text-light: #ffffff;
+  --color-text-dark: #000000;
+  --color-text-muted: #777777;
+
+  /* ============================= */
+  /* 📌 HEADER */
+  /* ============================= */
+  --color-header-bg: #b45777;
+  --color-header-transparent: transparent;
+  --color-header-text: #000000;
+  --color-header-text-light: #ffffff;
+  --color-header-shadow: rgba(0, 0, 0, 0.05);
+
+  /* ============================= */
+  /* 📱 SIDEBAR */
+  /* ============================= */
+  --color-sidebar-bg: #ffffff;
+  --color-sidebar-text: #000000;
+  --color-sidebar-overlay: rgba(0, 0, 0, 0.4);
+  --color-sidebar-footer: var(--color-secondary);
+
+/* ============================= */
+/* 🛒 CART */
+/* ============================= */
+--color-cart-bg: #ffffff;
+--color-cart-text: #000000; /* 🔥 força texto escuro */
+--color-cart-overlay: rgba(0, 0, 0, 0.5);
+--color-cart-border: #eeeeee;
+
+--color-cart-badge-text-top:var(--color-about-link);
+--color-cart-badge-top: #ffffff;
+--color-cart-badge-scrolled: var(--color-primary);
+--color-cart-badge-text-scrolled: #ffffff;
+
+  /* ============================= */
+  /* 🌄 HERO */
+  /* ============================= */
+  --color-hero-text: #ffffff;
+  --color-hero-muted: #cccccc;
+
+  --color-hero-accent: var(--color-primary);
+
+  --color-hero-overlay-dark: rgba(0,0,0,0.7);
+
+  --color-hero-glass: rgba(180, 87, 119, 0.25);
+  --color-hero-glass-border: rgba(255,255,255,0.1);
+
+  --color-hero-highlight: var(--color-secondary);
+  --color-hero-subtext: #eeeeee;
+
+  --color-hero-btn-bg: #ffffff;
+  --color-hero-btn-text: #000000;
+  --color-hero-btn-border: #ffffff;
+
+  /* ============================= */
+  /* 🛍️ PRODUCTS */
+  /* ============================= */
+  --color-products-accent: var(--color-secondary);
+  --color-products-text-muted: var(--color-text-muted);
+
+  --color-product-card-bg: #ffffff;
+  --color-product-shadow: rgba(0,0,0,0.05);
+  --color-product-shadow-hover: rgba(0,0,0,0.1);
+
+  --color-product-button-bg: var(--color-primary);
+  --color-product-button-hover: #8f3f5d;
+  --color-product-button-text: #ffffff;
+
+  /* ============================= */
+  /* 🗂️ CATEGORIES */
+  /* ============================= */
+  --color-categories-bg: #fff5f8;
+
+  /* ============================= */
+  /* 📖 ABOUT */
+  /* ============================= */
+  --color-about-bg: #ffffff;
+
+  --color-about-accent: var(--color-secondary);
+
+  --color-about-text: #555555;
+  --color-about-text-muted: #777777;
+
+  --color-about-card-bg: #ffffff;
+
+  --color-about-link: #000000;
+
+  /* ============================= */
+  /* 📸 INSTAGRAM */
+  /* ============================= */
+  --color-instagram-accent: var(--color-secondary);
+
+  --color-instagram-overlay: rgba(0,0,0,0.4);
+  --color-instagram-modal: rgba(0,0,0,0.8);
+
+  --color-instagram-icon: #ffffff;
+
+  --color-instagram-btn-bg: var(--color-primary);
+  --color-instagram-btn-hover: #8f3f5d;
+  --color-instagram-btn-text: #ffffff;
+
+  /* ============================= */
+  /* 🔻 FOOTER */
+  /* ============================= */
+  --color-footer-bg: var(--color-primary);
+
+  --color-footer-text: #ffffff;
+  --color-footer-text-muted: #dddddd;
+  --color-footer-link: #eeeeee;
+  --color-footer-link-hover: #ffffff;
+
+  --color-footer-border: rgba(255,255,255,0.1);
+  --color-footer-bottom-text: #cccccc;
+
+  
+  
+  /* ============================= */
+  /* 🛍️ CATALOG */
+  /* ============================= */
+  
+  --color-catalog-bg: #ffffff;
+  
+  /* filtros */
+  --color-filter-bg: #ffffff;
+  --color-filter-border: #eeeeee;
+  --color-filter-title: #000000;
+  --color-filter-text: #555555;
+  
+  /* botões filtro */
+  --color-filter-btn-bg: transparent;
+  --color-filter-btn-border: #eeeeee;
+  --color-filter-btn-text: #000000;
+  --color-filter-btn-active: #C76F8F;
+  
+  /* botão aplicar */
+  --color-filter-apply-bg: #4b1d2a;
+  --color-filter-apply-text: #ffffff;
+  
+  /* produto */
+  --color-product-card-bg: #ffffff;
+  --color-product-text: #000000;
+  --color-product-price: #000000;
+  
+  /* badge */
+  --color-product-badge-bg: #C76F8F;
+  --color-product-badge-text: #ffffff;
+  
+  /* botão produto */
+  --color-product-btn-bg: #4b1d2a;
+  --color-product-btn-text: #ffffff;
+  --color-product-btn-hover: #2e0f18;
+}

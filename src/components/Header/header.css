@@ -1,0 +1,132 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* CONTEÚDO */
+.header-inner {
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--color-header-transparent);
+  color: var(--color-text-light);
+
+  transition: 0.3s;
+}
+
+/* SCROLL */
+.header.scrolled {
+  background: var(--color-header-bg);
+  color: var(--color-text-dark);
+  box-shadow: 0 5px 20px var(--color-shadow);
+}
+
+/* GARANTE COR PRETA */
+.header.scrolled a,
+.header.scrolled button,
+.header.scrolled .logo,
+.header.scrolled svg {
+  color: var(--color-text-dark);
+}
+
+/* LOGO */
+.logo {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* NAV */
+.nav-left {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-left a,
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+/* BOTÕES */
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* CART */
+.cart-btn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+
+  background: var(--color-cart-badge-top);
+  color: var(--color-cart-badge-text-top);
+
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 50%;
+
+  transition: 0.3s;
+}
+
+.header.scrolled .cart-count {
+  background: var(--color-cart-badge-scrolled);
+  color: var(--color-cart-badge-text-scrolled);
+}
+
+/* RESPONSIVO */
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .nav-left {
+    flex: 0;
+  }
+
+  .logo {
+    flex: 1;
+    text-align: center;
+  }
+}

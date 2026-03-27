@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Georgia', serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px; /* 🔥 padrão que você quer */
+  }
+}

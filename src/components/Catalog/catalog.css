@@ -1,0 +1,225 @@
+/* ============================= */
+/* 🛍️ CATALOG */
+/* ============================= */
+
+.catalog {
+  padding: 40px 0 80px;
+}
+
+.catalog-hero-inner {
+  padding-top: 80px;
+}
+
+/* 🔥 layout principal */
+.catalog-wrapper {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+}
+
+/* ============================= */
+/* 🎛️ FILTERS */
+/* ============================= */
+
+.filters {
+  background: var(--color-filter-bg);
+  padding: 20px;
+  border-radius: 20px;
+  height: fit-content;
+  border: 1px solid var(--color-filter-border);
+}
+
+.filters h3 {
+  color: var(--color-filter-title);
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-filter-text);
+  font-weight: 600;
+}
+
+/* TAMANHOS */
+.sizes {
+  display: flex;
+  gap: 10px;
+}
+
+.sizes button {
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--color-filter-btn-border);
+  background: var(--color-filter-btn-bg);
+  color: var(--color-filter-btn-text);
+  cursor: pointer;
+}
+
+/* BOTÃO APLICAR */
+.apply {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  background: var(--color-filter-apply-bg);
+  color: var(--color-filter-apply-text);
+  cursor: pointer;
+}
+
+/* ============================= */
+/* 🧱 GRID PRODUTOS */
+/* ============================= */
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* ============================= */
+/* 🛒 CARD */
+/* ============================= */
+
+
+.card-colors {
+  display: flex;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+.card-sizes {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.card-sizes span {
+  font-size: 11px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+
+  color: var(--color-products-text-muted);
+}
+
+.color-dot:hover {
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+
+.more-colors {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  background: #eee;
+  color: #555;
+}
+
+.plus {
+  background: var(--color-products-accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.card-sizes span:hover {
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.product-card {
+  background: var(--color-product-card-bg);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.product-card .image {
+  height: 260px;
+  background: #000;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--color-product-badge-bg);
+  color: var(--color-product-badge-text);
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.product-card h4 {
+  margin: 10px 0 5px;
+  color: var(--color-product-text);
+}
+
+.price {
+  font-weight: bold;
+  color: var(--color-product-price);
+}
+
+.product-card button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: var(--color-product-btn-bg);
+  color: var(--color-product-btn-text);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-card button:hover {
+  background: var(--color-product-btn-hover);
+}
+
+.category {
+  display: inline-block;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 10px;
+
+  background: var(--color-products-accent);
+  color: #fff;
+
+  margin: 5px 0;
+}
+
+/* ============================= */
+/* 📱 MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .catalog-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    display: none; /* depois a gente abre com botão */
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+}

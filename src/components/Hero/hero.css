@@ -1,0 +1,141 @@
+.hero {
+  position: relative;
+  height: 120vh;
+  min-height: 700px;
+  overflow: hidden;
+}
+
+/* IMAGEM */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center right;
+}
+
+/* ESCURECER */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--color-hero-overlay-dark), transparent);
+}
+
+/* CONTEÚDO */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: var(--color-hero-text);
+}
+
+/* TEXTO */
+.tag {
+  color: var(--color-hero-accent);
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+}
+
+.hero h1 span {
+  color: var(--color-hero-accent);
+}
+
+.hero p {
+  margin-top: 16px;
+  max-width: 400px;
+  color: var(--color-hero-muted);
+}
+
+/* BOTÕES */
+.buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.primary {
+  background: var(--color-hero-btn-bg);
+  color: var(--color-hero-btn-text);
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+}
+
+.outline {
+  border: 1px solid var(--color-hero-btn-border);
+  padding: 12px 24px;
+  border-radius: 999px;
+  color: var(--color-hero-text);
+  background: transparent;
+}
+
+/* BARRA */
+.hero-overlay-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 5;
+
+  backdrop-filter: blur(12px);
+  background: var(--color-hero-glass);
+
+  border-top: 1px solid var(--color-hero-glass-border);
+}
+
+/* CONTEÚDO */
+.overlay-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 160px;
+}
+
+/* ITENS */
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.item strong {
+  color: var(--color-hero-highlight);
+  font-size: 18px;
+}
+
+.item span {
+  color: var(--color-hero-subtext);
+  font-size: 13px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    margin-top: -80px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-bg {
+    background-position: center;
+  }
+
+  .overlay-content {
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 0;
+  }
+}

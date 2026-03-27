@@ -1,0 +1,34 @@
+.admin-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 40px;
+
+  background: #2b0f0a; /* sua cor */
+  color: white;
+}
+
+.admin-header h2 {
+  font-size: 20px;
+}
+
+.admin-header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.admin-header a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.admin-header a:hover {
+  opacity: 1;
+}

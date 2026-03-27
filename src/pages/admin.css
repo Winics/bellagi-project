@@ -1,0 +1,140 @@
+.admin-page {
+  padding: 120px 20px;
+  background: #f8f3f5;
+  min-height: 100vh;
+}
+
+/* GRID PRINCIPAL */
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* COLUNAS */
+.admin-left,
+.admin-right {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+/* INPUTS */
+.admin-left input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* SEÇÕES */
+.section {
+  margin-top: 15px;
+}
+
+/* TAMANHOS */
+.sizes button {
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+/* CORES */
+.colors button {
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+}
+
+/* CHECKBOX */
+.checkbox {
+  display: block;
+  margin-top: 15px;
+}
+
+/* BOTÃO */
+.save {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #2b0f0a;
+  color: white;
+  cursor: pointer;
+}
+
+/* LISTA PRODUTOS */
+.product-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.product-row img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-row .info {
+  flex: 1;
+}
+
+.product-row .category {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+
+.product-row .badge {
+  display: inline-block;
+  background: #5a0f0f;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.product-row .actions button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.product-row .actions button:first-child {
+  background: #ddd;
+}
+
+.product-row .actions button:last-child {
+  background: #ff4d4d;
+  color: white;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  resize: none;
+  margin-top: 10px;
+}
+
