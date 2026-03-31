@@ -19,7 +19,7 @@ export default function Catalog({
           <h3>Filtrar por</h3>
 
           {/* CATEGORIA */}
-          <div className="filter-group">
+          <div className="filter-group"> 
             <span>Categoria</span>
 
             {[...new Set(allProducts.map(p => p.category))].map((cat, i) => (
