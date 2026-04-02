@@ -123,11 +123,17 @@
 /* MOBILE */
 @media (max-width: 768px) {
   .hero {
+    min-height: 50vh;
+    padding: 40px 20px;
     margin-top: -80px;
   }
 
   .hero h1 {
     font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 14px;
   }
 
   .hero-bg {
