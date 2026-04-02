@@ -1,18 +1,25 @@
 import { useState, useEffect } from "react";
+import { supabase } from "../lib/supabase";
 import Catalog from "../components/Catalog/Catalog";
 import "../components/Catalog/catalog.css";
 
 export default function CatalogPage({ addToCart }) {
 
   const [products, setProducts] = useState([]);
-
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
 
-  // 🔥 carregar produtos
+  // 🔥 BUSCAR DO BANCO
   useEffect(() => {
-    const saved = localStorage.getItem("products");
-    if (saved) setProducts(JSON.parse(saved));
+    async function fetchProducts() {
+      const { data, error } = await supabase
+        .from("products")
+        .select("*");
+
+      if (!error) setProducts(data);
+    }
+
+    fetchProducts();
   }, []);
 
   // 🎯 FILTRO
@@ -29,7 +36,6 @@ export default function CatalogPage({ addToCart }) {
 
   return (
     <>
-      {/* HERO */}
       <section className="catalog-hero">
         <div className="container catalog-hero-inner">
 
@@ -38,7 +44,6 @@ export default function CatalogPage({ addToCart }) {
             <h1>Catálogo Completo</h1>
           </div>
 
-          {/* 🔥 DINÂMICO */}
           <span className="catalog-count">
             {filteredProducts.length} produtos encontrados
           </span>
@@ -46,7 +51,6 @@ export default function CatalogPage({ addToCart }) {
         </div>
       </section>
 
-      {/* 🔥 PASSANDO TUDO */}
       <Catalog
         addToCart={addToCart}
         products={filteredProducts}
