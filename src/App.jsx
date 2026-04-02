@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+
+import { useAuth } from "./context/AuthContext"; // 🔥 IMPORTANTE
 
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -10,16 +11,17 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import CatalogPage from "./pages/CatalogPage";
 import ProductPage from "./pages/ProductPage";
+import LoginPage from "./pages/LoginPage"; // 🔥 NOVO
 
-import AdminHeader from "./components/AdminHeader/AdminHeader";
 import AdminPage from "./pages/AdminPage";
 
 import "./components/styles/colors.css";
 
 function App() {
-const location = useLocation(); // 🔥 IMPORTANTE
-  
-  const isAdmin = location.pathname.startsWith("/Admin");
+  const location = useLocation();
+  const { user } = useAuth(); // 🔐
+
+  const isAdminRoute = location.pathname.startsWith("/admin");
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
@@ -53,25 +55,31 @@ const location = useLocation(); // 🔥 IMPORTANTE
 
   return (
     <>
+      {/* 🔥 ESCONDE HEADER NO ADMIN */}
+      {!isAdminRoute && (
         <Header
           menuOpen={menuOpen}
           onMenu={() => setMenuOpen(!menuOpen)}
           onCart={() => setCartOpen(!cartOpen)}
           cartCount={cartCount}
         />
+      )}
 
-      <Sidebar
-        open={menuOpen}
-        onClose={() => setMenuOpen(false)}
-      />
+      {!isAdminRoute && (
+        <Sidebar
+          open={menuOpen}
+          onClose={() => setMenuOpen(false)}
+        />
+      )}
 
-      <Cart
-        open={cartOpen}
-        onClose={() => setCartOpen(false)}
-        cartItems={cartItems}
-        setCartItems={setCartItems}
-      />
-
+      {!isAdminRoute && (
+        <Cart
+          open={cartOpen}
+          onClose={() => setCartOpen(false)}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+        />
+      )}
 
       <Routes>
         <Route path="/" element={<Home addToCart={addToCart} />} />
@@ -86,10 +94,15 @@ const location = useLocation(); // 🔥 IMPORTANTE
           element={<ProductPage addToCart={addToCart} />}
         />
 
-        {/* 🔥 AQUI DENTRO */}
-        <Route path="/admin" element={<AdminPage />} />
+        {/* 🔐 PROTEÇÃO REAL */}
+        <Route
+          path="/admin"
+          element={user ? <AdminPage /> : <LoginPage />}
+        />
       </Routes>
-      <Footer />
+
+      {/* 🔥 ESCONDE FOOTER NO ADMIN */}
+      {!isAdminRoute && <Footer />}
     </>
   );
 }
